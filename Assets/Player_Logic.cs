@@ -44,20 +44,20 @@ public class Player_Logic : MonoBehaviour
         Rig.MovePosition(Rig.position + transform.TransformDirection(move_direction) * move_speed * Time.deltaTime);
         */
         if(Rig.velocity.magnitude<17){
-        Rig.AddForce(transform.TransformDirection(move_direction)*30);
+        Rig.AddForce(transform.TransformDirection(move_direction)*45);
         }
     }
 
     void Jump()
     {
-        if (Grounded == true)//  もし、Groundedがtrueなら、
-        {
+        //if (Grounded == true)//  もし、Groundedがtrueなら、
+        //{
             if (Input.GetKeyDown(KeyCode.Space))//  もし、スペースキーがおされたなら、  
             {
-                Grounded = false;//  Groundedをfalseにする
-                Rig.AddForce(transform.up * Jumppower * 100);//  上にJumpPower分力をかける
+                //Grounded = false;//  Groundedをfalseにする
+                Rig.AddForce(transform.up * Jumppower * 170);//  上にJumpPower分力をかける
             }
-        }
+        //}
     }
 
     void OnCollisionEnter(Collision other)//  他オブジェクトに触れた時の処理
