@@ -44,7 +44,7 @@ public class Player_Logic : MonoBehaviour
         Rig.MovePosition(Rig.position + transform.TransformDirection(move_direction) * move_speed * Time.deltaTime);
         */
         if(Rig.velocity.magnitude<5.5){
-        Rig.AddForce(transform.TransformDirection(move_direction)*30);
+        Rig.AddForce(transform.TransformDirection(move_direction)*50);
         }
     }
 
